@@ -11,7 +11,7 @@ on:
       - published
 
 env:
-  DOCKER_BASE_NAME: slashnephy/epgbird
+  DOCKER_BASE_NAME: tyage/epgbird
 
 jobs:
   build:
@@ -50,7 +50,7 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64/v8
-          tags: ghcr.io/${{ env.DOCKER_BASE_NAME }}:${{ env.DOCKER_TAG }}
+          tags: ghcr.io/${{ DOCKER_BASE_NAME}}:${{ env.DOCKER_TAG }}
           cache-from: ghcr.io/${{ env.DOCKER_BASE_NAME }}:${{ env.DOCKER_TAG }}
           build-args: BUILDKIT_INLINE_CACHE=1
 
