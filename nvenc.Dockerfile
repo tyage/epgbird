@@ -3,7 +3,7 @@ ARG IMAGE_TAG
 FROM slashnephy/epgbird:$IMAGE_TAG AS image
 
 # Final Stage
-FROM ghcr.io/starrybluesky/ffmpeg:4.3.2-ubuntu
+FROM ghcr.io/jrottenberg/ffmpeg/4.3.3-ubuntu2004:latest
 
 WORKDIR /app
 COPY --from=image /app/epgbird.jar /app/epgbird.jar
