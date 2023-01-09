@@ -1,6 +1,6 @@
 ARG IMAGE_TAG
 
-FROM slashnephy/epgbird:$IMAGE_TAG AS image
+FROM tyage/epgbird:$IMAGE_TAG AS image
 
 # Final Stage
 FROM ghcr.io/jrottenberg/ffmpeg/4.3.3-ubuntu2004:latest
